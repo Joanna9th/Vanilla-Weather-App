@@ -1,0 +1,29 @@
+.mainContainer {
+  border: 5px solid rgb(150, 109, 216);
+  border-radius: 25px;
+  width: 650px;
+  margin: 0 auto;
+  padding: 15px;
+  background-image: url("");
+}
+
+input {
+  background-color: rgb(150, 109, 216);
+  color: azure;
+  border: 2px solid rgb(150, 109, 216);
+  border-radius: 5px;
+}
+.input-text {
+  width: 250px;
+  background-color: rgb(150, 109, 216);
+  color: azure;
+  border: 2px solid rgb(150, 109, 216);
+  border-radius: 5px;
+}
+input::placeholder {
+  color: rgb(78, 8, 89);
+}
+.cityTemperature {
+  display: flex;
+  justify-content: space-between;
+}
