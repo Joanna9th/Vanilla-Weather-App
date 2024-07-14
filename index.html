@@ -9,7 +9,7 @@
     <title>Weather App</title>
   </head>
   <body>
-    <div class="mainContainer">
+    <div id="mainContainer" class="mainContainer">
       <div>
         <form id="search-form">
           <input
@@ -24,9 +24,13 @@
       <div class="cityTemperature">
         <div>
           <h1 id="city">City</h1>
-          <p>Wind, humidity</p>
+          <p>
+            Wind <span id="wind">0</span> km/h. Humidity
+            <span id="humidity"> 0</span> %
+          </p>
         </div>
-        <h1 id="temperature">Temperatureº</h1>
+        <h1><span id="temperature">Temperature</span>ºC</h1>
+        <img id="myImage" src="" alt="" />
       </div>
       <div>
         <footer>

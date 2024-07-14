@@ -1,9 +1,29 @@
 const APIkey = "4561e2c6f31601a0ca29o46bce3t1e7d";
 
 function weatherApp(response) {
+  let weatherColor = "";
+  let weathertemp = Math.round(response.data.temperature.current);
+
   console.log(response);
   let temperature = document.querySelector("#temperature");
-  temperature.innerHTML = response.data.temperature.current;
+  temperature.innerHTML = Math.round(response.data.temperature.current);
+
+  let wind = document.querySelector("#wind");
+  wind.innerHTML = response.data.wind.speed;
+
+  let humidity = document.querySelector("#humidity");
+  humidity.innerHTML = response.data.temperature.humidity;
+
+  /*  if (weathertemp >= 24) {
+    weatherColor = "red";
+  } else {
+    weatherColor = "lightblue";
+  }
+  const mainContainer = document.querySelector("#mainContainer");
+  mainContainer.style.backgroundColor = weatherColor; */
+
+  var image = document.getElementById("myImage");
+  image.src = response.data.condition.icon_url;
 }
 
 function temperatureApi(city) {
