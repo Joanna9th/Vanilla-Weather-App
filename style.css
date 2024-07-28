@@ -1,28 +1,91 @@
+body {
+  background-color: rgb(235, 227, 245);
+}
+
 .mainContainer {
-  border: 5px solid rgb(150, 109, 216);
+  box-shadow: 0 0 10px rgb(133, 80, 219);
+  background-color: white;
   border-radius: 25px;
   width: 650px;
+  height: 350px;
   margin: 0 auto;
+  margin-top: 3%;
   padding: 15px;
+  color: rgb(47, 29, 78);
+  text-decoration: solid;
 }
 
 input {
-  background-color: rgb(150, 109, 216);
+  background-color: rgb(173, 150, 211);
   color: azure;
-  border: 2px solid rgb(150, 109, 216);
+  border: 2px solid rgb(173, 150, 211);
   border-radius: 5px;
+  font-size: 20px;
 }
-.input-text {
-  width: 250px;
-  background-color: rgb(150, 109, 216);
-  color: azure;
-  border: 2px solid rgb(150, 109, 216);
-  border-radius: 5px;
+.input-submit:hover {
+  border: 1px solid rgb(199, 166, 238);
+  box-shadow: 0 0 20px rgb(106, 19, 212);
+  cursor: pointer;
 }
+
+#search-form {
+  display: grid;
+  grid-template-columns: 80% 20%;
+  width: 100%;
+  gap: 3px;
+  font-size: 16px;
+}
+
 input::placeholder {
-  color: rgb(78, 8, 89);
+  color: white;
+  font-size: 16px;
+}
+
+.input-submit {
+  font-size: 16px;
+}
+
+.input-text {
+  padding-left: 10px;
 }
 .cityTemperature {
   display: flex;
   justify-content: space-between;
+}
+
+.weather-forecast {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+}
+
+.weather-forecast-day {
+  text-align: center;
+  color: rgb(47, 29, 78);
+  font-size: 18px;
+  line-height: 30px;
+}
+
+.weather-forecast-temperature {
+  color: rgb(106, 19, 212);
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+}
+.temperature-strong {
+  font-weight: bold;
+}
+
+/*.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Ensures the container takes up the full height of the viewport */
+
+/*.content {
+  flex: 1; /* Allows the content to fill the remaining space in the container */
+
+footer {
+  font-size: 14px;
+  color: grey;
+  margin-top: auto; /* Pushes the footer to the bottom of the container */
 }

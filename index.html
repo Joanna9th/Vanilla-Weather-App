@@ -10,7 +10,7 @@
   </head>
   <body>
     <div id="mainContainer" class="mainContainer">
-      <div>
+      <div class="search-form">
         <form id="search-form">
           <input
             id="cityform"
@@ -23,29 +23,27 @@
       </div>
       <div class="cityTemperature">
         <div>
-          <h1 id="city">City</h1>
+          <h1 id="city">Panama</h1>
           <p>
-            Wind <span id="wind">0</span> km/h. Humidity
-            <span id="humidity"> 0</span> %
+            Wind <span id="wind">23</span> km/h. Humidity
+            <span id="humidity"> 40</span> %
           </p>
         </div>
-        <h1><span id="temperature">Temperature</span>ºC</h1>
+        <h1><span id="temperature">32</span>ºC</h1>
         <img id="myImage" src="" alt="" />
       </div>
-      <div>
-        <footer>
-          <p onclick="searchCity()">
-            This project was coded by
-            <a href="https://github.com/Joanna9th">Joanna9th</a> is open sourced
-            on
-            <a href="https://github.com/Joanna9th/Vanilla-Weather-App"
-              >Github</a
-            >
-            and hosted on
-            <a href="https://vainilliaweather1407.netlify.app/">Netlify</a>
-          </p>
-        </footer>
-      </div>
+
+      <div class="weather-forecast" id="forecast"></div>
+      <footer>
+        <p onclick="searchCity()">
+          This project was coded by
+          <a href="https://github.com/Joanna9th">Joanna9th</a> is open sourced
+          on
+          <a href="https://github.com/Joanna9th/Vanilla-Weather-App">Github</a>
+          and hosted on
+          <a href="https://vainilliaweather1407.netlify.app/">Netlify</a>
+        </p>
+      </footer>
     </div>
   </body>
   <script src="index.js"></script>

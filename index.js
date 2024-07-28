@@ -24,8 +24,14 @@ function weatherApp(response) {
 
   var image = document.getElementById("myImage");
   image.src = response.data.condition.icon_url;
+  getForecast(response.data.city);
 }
 
+function getForecast(city) {
+  let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${APIkey}&units=metric`;
+  console.log(apiUrl);
+  axios(apiUrl).then(displayForecast);
+}
 function temperatureApi(city) {
   let url =
     `https://api.shecodes.io/weather/v1/current?query=${city}&key=` + APIkey;
@@ -43,3 +49,27 @@ function searchCity(event) {
 let searchForm = document.querySelector("#search-form");
 console.log(searchForm);
 searchForm.addEventListener("submit", searchCity);
+
+function displayForecast(response) {
+  console.log(response.data);
+  let days = ["Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
+  let forecastHtml = "";
+
+  days.forEach(function (day) {
+    forecastHtml =
+      forecastHtml +
+      `
+    <div class="weather-forecast-day">
+      <div class="weather-forecast-date">${day}</div>
+      <div class="weather-forecast-icon">🌤️</div>
+      <div class="weather-forecast-temperature">
+        <div class="temperature-strong">23ºC</div>
+        <div class="temperature-nostrong">15ºC</div>
+      </div>
+    </div>
+  `;
+  });
+
+  let forecastElement = document.querySelector("#forecast");
+  forecastElement.innerHTML = forecastHtml;
+}
