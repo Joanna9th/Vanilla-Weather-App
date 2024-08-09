@@ -88,4 +88,9 @@ footer {
   font-size: 14px;
   color: grey;
   margin-top: auto; /* Pushes the footer to the bottom of the container */
+
+  width: 90%;
+  padding: 20px;
+  text-align: center;
+  bottom: 0%;
 }
